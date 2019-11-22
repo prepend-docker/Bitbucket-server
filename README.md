@@ -31,13 +31,13 @@ Volume permission is managed by entry scripts. To get started you can use a data
 volume, or named volumes. In this example we'll use named volumes.
 
     $> docker volume create --name bitbucketVolume
-    $> docker run -v bitbucketVolume:/var/atlassian/application-data/bitbucket --name="bitbucket" -d -p 7990:7990 -p 7999:7999 atlassian/bitbucket-server
+    $> docker run -v bitbucketVolume:/var/atlassian/application-data/bitbucket --name="bitbucket" -d -p 7990:7990 -p 7999:7999 prepend2/bitbucket-server
 
 Note that this command can substitute folder paths with named volumes.
 
 Start Atlassian Bitbucket Server:
 
-    $> docker run -v /data/bitbucket:/var/atlassian/application-data/bitbucket --name="bitbucket" -d -p 7990:7990 -p 7999:7999 atlassian/bitbucket-server
+    $> docker run -v /data/bitbucket:/var/atlassian/application-data/bitbucket --name="bitbucket" -d -p 7990:7990 -p 7999:7999 prepend2/bitbucket-server
 
 **Success**. Bitbucket is now available on [http://localhost:7990](http://localhost:7990)*
 
