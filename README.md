@@ -154,7 +154,7 @@ database, and an external ElasticSearch instance might look like:
         -v /data/bitbucket-shared:/var/atlassian/application-data/bitbucket/shared \
         --name="bitbucket" \
         -d -p 7990:7990 -p 7999:7999 \
-        atlassian/bitbucket-server
+        prepend2/bitbucket-server
 
 ### Cluster settings
 
@@ -198,7 +198,7 @@ container and start a new one based on a more recent image:
 
     $> docker stop bitbucket
     $> docker rm bitbucket
-    $> docker pull atlassian/bitbucket-server:<desired_version>
+    $> docker pull prepend2/bitbucket-server:<desired_version>
     $> docker run ... (See above)
 
 As your data is stored in the data volume directory on the host it will still
@@ -225,11 +225,11 @@ Read more about data recovery and backups:
 # Versioning
 
 The `latest` tag matches the most recent version of this repository. Thus using
-`atlassian/bitbucket:latest` or `atlassian/bitbucket` will ensure you are
+`prepend2/bitbucket:latest` or `atlassian/bitbucket` will ensure you are
 running the most up to date version of this image.
 
 Alternatively, you can use a specific minor version of Bitbucket Server by
-using a version number tag: `atlassian/bitbucket-server:6`. This will
+using a version number tag: `prepend2/bitbucket-server:6`. This will
 install the latest `6.x.x` version that is available.
 
 # Support
